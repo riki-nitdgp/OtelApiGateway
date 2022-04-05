@@ -2,7 +2,8 @@
 
 {
   "SERVICE_NAME": "api-gateway",
-  "PORT": 8006,
+  "PORT": 8020,
+  "ENABLE_OPEN_TELEMETRY": true,
   "HOST": "0.0.0.0",
   "DEBUG": false,
   "API_PREFIX": "/api",
