@@ -10,6 +10,8 @@ COPY ./api_gateway/config.json /opt/api_gateway/config.json
 
 RUN pip3 install -r /opt/api_gateway/requirements.txt
 
+RUN opentelemetry-bootstrap --action=install
+
 COPY ./api_gateway/app /opt/user_service/app
 
 EXPOSE 8005
