@@ -9,13 +9,13 @@
   "API_PREFIX": "/api",
 
   "USER_SERVICE": {
-    "HOST": "http://localhost:8005"
+    "HOST": "http://user-service:8005"
   },
   "RATING_REVIEW_SERVICE": {
-    "HOST": "http://localhost:8002"
+    "HOST": "http://ating-review-service:8002"
   },
 
   "INVENTORY_SERVICE" : {
-    "HOST": "http://localhost:8009"
+    "HOST": "http://inventory-service:8009"
   }
 }

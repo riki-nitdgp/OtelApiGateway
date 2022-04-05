@@ -1,18 +1,18 @@
 FROM python:3.9
 
-WORKDIR /opt/api_gateway
+WORKDIR /opt/OtelApiGateway
 
-COPY ./api_gateway/requirements.txt /opt/api_gateway/requirements.txt
+COPY ./OtelApiGateway/requirements.txt /opt/OtelApiGateway/requirements.txt
 
-COPY ./api_gateway/server.py /opt/api_gateway/server.py
+COPY ./OtelApiGateway/server.py /opt/OtelApiGateway/server.py
 
-COPY ./api_gateway/config.json /opt/api_gateway/config.json
+COPY ./OtelApiGateway/config.json /opt/OtelApiGateway/config.json
 
-RUN pip3 install -r /opt/api_gateway/requirements.txt
+RUN pip3 install -r /opt/OtelApiGateway/requirements.txt
 
 RUN opentelemetry-bootstrap --action=install
 
-COPY ./api_gateway/app /opt/user_service/app
+COPY ./OtelApiGateway/app /opt/OtelApiGateway/app
 
 EXPOSE 8005
 
