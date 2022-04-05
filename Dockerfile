@@ -2,15 +2,15 @@ FROM python:3.9
 
 WORKDIR /opt/api_gateway
 
-COPY ./requirements.txt /opt/api_gateway/requirements.txt
+COPY ./api_gateway/requirements.txt /opt/api_gateway/requirements.txt
 
-COPY ./server.py /opt/api_gateway/server.py
+COPY ./api_gateway/server.py /opt/api_gateway/server.py
 
-COPY ./config.json /opt/api_gateway/config.json
+COPY ./api_gateway/config.json /opt/api_gateway/config.json
 
 RUN pip3 install -r /opt/api_gateway/requirements.txt
 
-COPY ./app /opt/user_service/app
+COPY ./api_gateway/app /opt/user_service/app
 
 EXPOSE 8005
 
