@@ -2,7 +2,7 @@
 
 {
   "SERVICE_NAME": "api-gateway",
-  "PORT": 8006,
+  "PORT": 8007,
   "ENABLE_OPEN_TELEMETRY": true,
   "HOST": "0.0.0.0",
   "DEBUG": false,
@@ -16,6 +16,6 @@
   },
 
   "INVENTORY_SERVICE" : {
-    "HOST": "http://inventory-service:8009"
+    "HOST": "http://localhost:8010"
   }
 }
