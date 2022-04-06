@@ -12,8 +12,6 @@ class BuildResponse:
 
     @property
     def meta(self):
-        if self._page_info:
-            self._meta['page_info'] = self._page_info
         return self._meta
 
     @property
@@ -28,6 +26,7 @@ class BuildResponse:
         result = dict()
         result['data'] = self._data
         result['meta'] = self._meta
+        result['page_info'] = self._page_info
         result['success'] = True
         result['status'] = self._http_status_code
         return result

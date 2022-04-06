@@ -71,7 +71,7 @@ class BaseAPIClientRequestHandler:
 
         if payload.get("success"):
             result = BuildResponse(payload["data"], meta=payload.get("meta", None),
-                                   http_status_code=http_status, page_info=payload.get("page_info"))
+                                   http_status_code=http_status, page_info=payload.get("pageInfo"))
 
             return result
         else:
