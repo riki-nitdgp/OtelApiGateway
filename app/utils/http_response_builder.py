@@ -8,11 +8,12 @@ class HttpResponseBuilder:
     async def build_success_response(cls, data: dict):
         meta = data.pop("meta", None)
         response = {
-            'data': data,
-            'meta': meta if meta else {},
+            'data': data.get("data"),
             'success': True,
             'status': status.HTTP_200_OK
         }
+        if meta:
+            response['meta'] = meta
         return JSONResponse(response)
 
     @classmethod

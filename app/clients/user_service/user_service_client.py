@@ -11,13 +11,13 @@ class UserServiceClient(BaseAPIClientRequestHandler):
     async def login(cls, payload: dict):
         path = '/api/user/login'
         result = await cls.post(path, data=payload)
-        return result.data
+        return result
 
     @classmethod
     async def signup(cls, payload):
         path = '/api/user/sign-up'
         result = await cls.post(path, data=payload)
-        return result.data
+        return result
 
     @classmethod
     async def authenticate(cls, auth_token: str):

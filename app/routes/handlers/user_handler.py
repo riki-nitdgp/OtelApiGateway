@@ -11,11 +11,11 @@ config = AppConfig.config
 async def login(_request: Request):
     payload = await _request.json()
     result = await UserManager.login(payload)
-    return await HttpResponseBuilder.build_success_response(result)
+    return await HttpResponseBuilder.build_success_response(result.__dict__())
 
 
 @routes.post("/signup")
 async def signup(_request: Request):
     payload = await _request.json()
     result = await UserManager.signup(payload)
-    return await HttpResponseBuilder.build_success_response(result)
+    return await HttpResponseBuilder.build_success_response(result.__dict__())
