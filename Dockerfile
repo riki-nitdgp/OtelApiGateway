@@ -16,6 +16,5 @@ COPY ./OtelApiGateway/app /opt/OtelApiGateway/app
 
 EXPOSE 8005
 
+CMD ["opentelemetry-instrument", "uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8006"]
 
-
-CMD ["opentelemetry-instrument", "uvicorn", "app.main:app, "--host 0.0.0.0", "---port 8006"]

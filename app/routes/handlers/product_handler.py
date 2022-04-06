@@ -24,7 +24,7 @@ async def all_products(_request: Request):
     return await HttpResponseBuilder.build_success_response(all_products.__dict__())
 
 
-@routes.get("/add-new")
+@routes.post("/add-new")
 @authenticate
 async def create_product(_request: Request):
     payload = await _request.json()
