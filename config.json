@@ -12,7 +12,7 @@
     "HOST": "http://user-service:8005"
   },
   "RATING_REVIEW_SERVICE": {
-    "HOST": "http://ating-review-service:8002"
+    "HOST": "http://rating-review-service:8002"
   },
 
   "INVENTORY_SERVICE" : {
